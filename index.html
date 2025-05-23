@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KOASIS - Your gateway to global markets for Korean retail businesses. We help local K-town shops expand globally through digital marketplace integration, content creation, and community building.">
+    <title>KOASIS – Your Gateway to Global Markets | Digital K-Town</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #7b3b8c;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.75;
+            color: #333;
+            background: #fff;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-family: 'Poppins', Arial, sans-serif;
+            color: var(--primary-color);
+            margin-top: 3.2rem;
+            margin-bottom: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+        }
+
+        h2, h3, h4 {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin-bottom: 1.2rem;
+            margin-top: 2.2rem;
+            letter-spacing: 0.7px;
+        }
+
+        p, .lead {
+            margin-bottom: 1.1rem;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 18px;
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(123,59,140,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
+            padding: 2rem 1.2rem;
+            background: #fff;
+        }
+        .service-card:hover {
+            transform: translateY(-7px) scale(1.03);
+            box-shadow: 0 16px 40px rgba(123,59,140,0.13), 0 2px 8px rgba(0,0,0,0.09);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 2rem;
+            box-shadow: 0 2px 12px rgba(123,59,140,0.13);
+            transition: box-shadow 0.3s, background 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #6a2d7a;
+            border-color: #6a2d7a;
+            box-shadow: 0 4px 24px 2px #ff6b6b55, 0 2px 12px rgba(123,59,140,0.18);
+        }
+        /* Soft glow for main CTA */
+        .btn-primary.btn-lg {
+            box-shadow: 0 0 0 0 #ff6b6b, 0 2px 12px rgba(123,59,140,0.13);
+            animation: glow 2.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 0 0 #ff6b6b33, 0 2px 12px rgba(123,59,140,0.13); }
+            100% { box-shadow: 0 0 16px 6px #ff6b6b55, 0 2px 12px rgba(123,59,140,0.13); }
+        }
+
+        .contact-form {
+            background-color: var(--secondary-color);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .korean-text {
+            font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
+            margin-top: 0.7rem;
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+        .lead + .korean-text,
+        p + .korean-text {
+            margin-top: 1.1rem;
+        }
+
+        /* Digital K-Town Community gradient background */
+        .digital-ktown-gradient {
+            background: linear-gradient(120deg, #f8f9fa 60%, #e9d6f6 100%);
+        }
+
+        /* Responsive spacing for mobile */
+        @media (max-width: 767px) {
+            .section-title {
+                margin-top: 1.5rem;
+                margin-bottom: 1.3rem;
+                font-size: 1.5rem;
+            }
+            .service-card {
+                padding: 1.2rem 0.7rem;
+            }
+            section {
+                margin-bottom: 2rem;
+            }
+            .playlist-mini-space {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .koasis-hero-banner {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100vw;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">KOASIS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Brand Banner -->
+    <section class="hero-section p-0" style="background:none; margin-top: 70px;">
+        <img src="images/koasis-main-banner-1.png" alt="KOASIS Brand Banner" class="img-fluid w-100 koasis-hero-banner">
+    </section>
+
+    <!-- K-Town Vibes Playlist Mini Section -->
+    <section class="py-2 playlist-mini-space" style="background: #181828;">
+        <div class="container text-center">
+            <div style="font-size:1.08rem; color:#fff; font-weight:600; letter-spacing:0.5px;">K-Town Vibes <span class="korean-text" style="font-size:1rem; color:#b98cff;">| 케이타운 감성 플레이리스트</span></div>
+            <div class="d-flex justify-content-center mt-2">
+                <iframe style="border-radius:16px; max-width:350px; width:100%; min-width:200px; height:80px; box-shadow:0 0 16px 2px #7b3b8c55, 0 2px 8px #0002; border:2px solid #7b3b8c; background:#222;" src="https://open.spotify.com/embed/playlist/1gxDMq0bewChCWz89GhQy9?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- SVG Wavy Divider -->
+    <div style="line-height:0;">
+        <svg viewBox="0 0 1440 60" width="100%" height="60" xmlns="http://www.w3.org/2000/svg"><path fill="#f8f9fa" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,32C960,21,1056,11,1152,10.7C1248,11,1344,21,1392,26.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+
+    <!-- What is KOASIS? -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">What is KOASIS?</h2>
+            <p class="lead mb-2">KOASIS is a digital platform that empowers local Korean retail businesses to reach global customers—without logistics headaches. We connect K-town shops to the world through marketplace integration, real-time content, and community-driven marketing.</p>
+            <p class="korean-text">KOASIS는 지역 한인 상점들이 복잡한 물류 걱정 없이 전 세계 고객에게 다가갈 수 있도록 돕는 디지털 플랫폼입니다. 마켓 연동, 실시간 콘텐츠, 커뮤니티 중심 마케팅으로 K-타운 상점과 전 세계를 연결합니다.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Visual -->
+    <section class="py-5">
+        <div class="container text-center">
+            <img src="images/howitworksvisual.png" alt="How KOASIS Works" class="img-fluid mb-4" style="max-width: 900px; width: 100%; border-radius: 16px; box-shadow: 0 4px 24px rgba(123,59,140,0.08);">
+            <div class="mx-auto" style="max-width: 700px;">
+                <p class="mb-0"><strong>How KOASIS Works:</strong> Multiple vendors list their products with KOASIS, which handles everything from online uploads, global shipping (via eBay), live shopping, real fan reviews, and social media marketing. We monitor trends, manage orders, and help vendors grow—so you can focus on your products.</p>
+                <p class="korean-text mt-2">여러 상점이 KOASIS에 상품을 등록하면, 저희가 온라인 업로드, 글로벌 배송(eBay), 라이브 쇼핑, 실시간 팬 리뷰, 소셜 마케팅까지 모두 지원합니다. 트렌드 분석과 주문 관리까지, KOASIS가 함께합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital K-Town Community Section -->
+    <section class="py-5 digital-ktown-gradient">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">🏙️ Digital K-Town Community</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <div class="p-4 rounded shadow-sm" style="background:white;">
+                        <p class="lead mb-2" style="font-size:1.25rem;">
+                            <span style="color:#7b3b8c; font-weight:700;">KOASIS isn't just a marketplace</span>—it's a digital K-Town.<br>
+                            <span style="color:#ff6b6b; font-weight:600;">Team up, create synergy, and attract more customers—just like real-life K-Town streets!</span>
+                        </p>
+                        <p style="color:#555;">Together, we drive more traffic, share audiences, and help each other grow.</p>
+                    </div>
+                </div>
+                <div class="col-md-1 d-none d-md-block">
+                    <i class="fas fa-exchange-alt fa-2x" style="color:#7b3b8c;"></i>
+                </div>
+                <div class="col-md-5">
+                    <div class="p-4 rounded shadow-sm" style="background:white;">
+                        <p class="korean-text" style="font-size:1.15rem;">
+                            <span style="color:#7b3b8c; font-weight:700;">디지털 케이타운 커뮤니티</span><br>
+                            KOASIS는 단순한 마켓이 아닙니다. 여러 한인 상점이 힘을 합쳐 시너지를 내고, 더 많은 고객을 유치하며, 오프라인 K-타운의 활기를 온라인에서 재현합니다.<br>
+                            <span style="color:#ff6b6b; font-weight:600;">함께 성장하는 커뮤니티에 지금 참여하세요!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-globe service-icon"></i>
+                    <h3>Global Reach</h3>
+                    <p>Access international markets through established platforms like eBay and Shopify</p>
+                    <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">eBay, Shopify 등 글로벌 플랫폼을 통해 해외 시장에 진출하세요.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>Data-Driven</h3>
+                    <p>Make informed decisions with real-time analytics and market insights</p>
+                    <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">실시간 데이터와 시장 분석으로 현명한 비즈니스 결정을 내릴 수 있습니다.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-users service-icon"></i>
+                    <h3>Community Focus</h3>
+                    <p>Build lasting relationships with customers through authentic content and engagement</p>
+                    <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">진정성 있는 콘텐츠와 소통으로 고객과의 신뢰를 쌓아갑니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-store service-icon"></i>
+                            <h4>Local Retail Partnership</h4>
+                            <p>Partner with your local K-town store and help your products reach global markets</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">지역 K-타운 매장과 협력하여 상품을 전 세계에 알릴 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shopping-cart service-icon"></i>
+                            <h4>Marketplace Integration</h4>
+                            <p>Seamless listing on eBay and Shopify with full technical support</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">eBay, Shopify에 손쉽게 상품을 등록하고, 모든 기술 지원을 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-camera service-icon"></i>
+                            <h4>Content Creation</h4>
+                            <p>Professional content creation by local influencers and creators</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">현지 인플루언서와 크리에이터가 직접 콘텐츠를 제작해드립니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">How It Works</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4>1. Partner With Us</h4>
+                            <p>Join our network of Korean retail partners and share your product catalog</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">KOASIS 파트너가 되어 상품 정보를 공유하세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4>2. We Handle the Setup</h4>
+                            <p>We'll list your products on global marketplaces and manage the technical aspects</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">글로벌 마켓(이베이, 쇼피파이)에 상품 등록과 기술 세팅을 KOASIS가 모두 처리합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4>3. Content Creation</h4>
+                            <p>Our network of creators will showcase your products authentically</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">현지 크리에이터가 진정성 있게 상품을 소개하는 콘텐츠를 제작합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4>4. Grow Your Business</h4>
+                            <p>Track performance and optimize your strategy with our analytics tools</p>
+                            <p class="korean-text" style="color:#7b3b8c; font-size:1.05rem;">분석 툴로 성과를 확인하고, 비즈니스 전략을 최적화하세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: Direct Text CTA -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">Get Started / 시작하기</h2>
+            <div class="p-4 rounded shadow-sm mx-auto" style="background:#f8f9fa; max-width:500px;">
+                <p class="lead mb-2">Ready to join KOASIS? <br><span style="color:#7b3b8c; font-weight:600;">Text us directly to get started!</span></p>
+                <p class="korean-text mb-3" style="color:#7b3b8c; font-size:1.15rem;">파트너 문의는 아래 번호로 문자 주세요.</p>
+                <a href="sms:2145426425" class="btn btn-primary btn-lg mb-2" style="font-size:1.3rem; letter-spacing:1px;">📱 214-542-6425</a>
+                <p class="mb-0" style="color:#555;">(Text only / 문자 문의 환영)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>KOASIS</h5>
+                    <p>Creating Digital K-Town</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small>&copy; 2024 KOASIS. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
